@@ -1,4 +1,4 @@
-# Express Insert and Select
+# Express Database
 
 In this workshop we're going to look at how to use express with a postgres database.
 
