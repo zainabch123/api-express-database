@@ -64,7 +64,10 @@ Implement validation so that if the client attempts to:
 * `PUT` a pet without a required field
 * `PATCH` a pet that doesn't exist
 * `DELETE` a pet that doesn't exist
+
 An error is returned to the client with a suitable message and HTTP code.
+
+You can implement this logic yourself, or use another library such as [express validator](https://express-validator.github.io/docs/). 
 
 ## Extension 4
 If not already done so, update your code structure to follow the example from Part 1 Extension 2.
