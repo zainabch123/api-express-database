@@ -1,4 +1,6 @@
-# API spec
+# Part 1 API spec
+
+Implement the following API methods. For Part 1, you do not need to include any validation.
 
 ## Books
 

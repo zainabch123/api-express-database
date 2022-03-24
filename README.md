@@ -44,8 +44,14 @@ _Figure 2: The terminal window where the express server is running successfully_
 ## Interacting with the Database
 To interact with the database we will use the [node-postgres](https://node-postgres.com/) library. We will use the [query](https://node-postgres.com/features/queries) method to send SQL queries to the database sever and receive responses. The `utils/database.js` file establishes the connection to the database. Your instructor will walk through this with you.
 
-### Demo 
-Your instructor will demonstrate implementing the books API. You will then implements the Pets API.
+## Demo 
+Your instructor will demonstrate implementing the books API, now using a real database. You will then implements the Pets API.
+
+## Instructions
+* [Part 1](api-spec-part-1.md)
+* [Part 1 Extensions](api-spec-part-1.md)
+* [Part 2](api-spec-part-1.md)
+* [Part 2 Extensions](api-spec-part-1.md)
 
 ## Tips
 - Take a look inside the `sql` folder to see what data types with which you are working with.
