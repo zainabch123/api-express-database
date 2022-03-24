@@ -3,7 +3,8 @@
 In this workshop we're going to look at how to use express with a postgres database.
 
 ## Learning Objectives
-
+* Explain how REST API methods interact with a relational database
+* Implement a REST API backed by a database using express and postgres
 
 ## Setup
 
