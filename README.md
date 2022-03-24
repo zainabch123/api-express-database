@@ -50,9 +50,9 @@ Your instructor will demonstrate implementing the books API, now using a real da
 
 ## Instructions
 * [Part 1](api-spec-part-1.md)
-* [Part 1 Extensions](api-spec-part-1-extension.md)
-* [Part 2](api-spec-part-1.md)
-* [Part 2 Extensions](api-spec-part-1.md)
+* [Part 1 Extensions](part-1-extensions.md)
+* [Part 2](api-spec-part-2.md)
+* [Part 2 Extensions](part-2-extensions.md)
 
 ## Tips
 - Take a look inside the `sql` folder to see what data types with which you are working with.

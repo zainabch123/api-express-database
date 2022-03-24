@@ -68,5 +68,3 @@ An error is returned to the client with a suitable message and HTTP code.
 
 ## Extension 4
 If not already done so, update your code structure to follow the example from Part 1 Extension 2.
-
-
