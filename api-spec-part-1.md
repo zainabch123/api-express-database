@@ -1,6 +1,6 @@
 # Part 1 API spec
 
-Implement the following API methods. For Part 1, you do not need to include any validation.
+Implement the following API methods. For the standard criteria, you do not need to implement any validation.
 
 ## Books
 

@@ -22,8 +22,8 @@ _Figure 1: A new ElephantSQL database instance_
 
 * create-books.sql
 * create-pets.sql
-* insert-test-books.sql
-* insert-test-pets.sql
+* insert-books.sql
+* insert-pets.sql
 
 5. Copy the URL of your new instance
 
@@ -49,7 +49,7 @@ Your instructor will demonstrate implementing the books API, now using a real da
 
 ## Instructions
 * [Part 1](api-spec-part-1.md)
-* [Part 1 Extensions](api-spec-part-1.md)
+* [Part 1 Extensions](api-spec-part-1-extension.md)
 * [Part 2](api-spec-part-1.md)
 * [Part 2 Extensions](api-spec-part-1.md)
 
