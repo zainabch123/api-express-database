@@ -92,7 +92,6 @@ Example Response
 Parameter | Value | Required | Description
 -|-|-|-
 `type` | Any string | No | Only returns pets of the provided type (i.e. `dog`)
-`microchip` | `true` or `false` | No | When `true` only return pets with a microchip. When `false`, only return pets without a microchip.
 
 Example Request
 ```sh
