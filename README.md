@@ -28,11 +28,7 @@ _Figure 1: A new ElephantSQL database instance_
 
 5. Copy the URL of your new instance
 
-6. Create a file `.env` in the root directory of your project. It should contain a single line, which contains the *environment variable* used to specify the url from the instance created above; e.g (where the stars below will contain your password):
-
-```env
-PGURL=postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu
-```
+6. Create a file `.env` in the __root directory__ of your project. It should be right next to the `.env.example` file. It should contain a single line, which contains the *environment variable* used to specify the url from the instance created above. See the example file for reference.
 
 7. Type `npm start`, which starts a development server that will reload whenever you make any changes to source files.
 
