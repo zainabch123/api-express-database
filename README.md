@@ -31,10 +31,10 @@ _Figure 1: A new ElephantSQL database instance_
 6. Create a file `.env` in the root directory of your project. It should contain a single line, which contains the *environment variable* used to specify the url from the instance created above; e.g (where the stars below will contain your password):
 
 ```env
-PGURL = "postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu" 
+PGURL = "postgres://zzlrlrtu:****@tyke.db.elephantsql.com/zzlrlrtu"
 ```
 
-7. Type `npm start`, which starts a development server that will reload whenever you make any changes to source files. 
+7. Type `npm start`, which starts a development server that will reload whenever you make any changes to source files.
 
 All being well, you will have a terminal window that looks like the following:
 
@@ -43,17 +43,15 @@ All being well, you will have a terminal window that looks like the following:
 _Figure 2: The terminal window where the express server is running successfully_
 
 ## Interacting with the Database
-To interact with the database we will use the [node-postgres](https://node-postgres.com/) library. We will use the [query](https://node-postgres.com/features/queries) method to send SQL queries to the database sever and receive responses. The `utils/database.js` file establishes the connection to the database. Your instructor will walk through this with you.
+To interact with the database we will use the [node-postgres](https://node-postgres.com/) library. We will use the [query](https://node-postgres.com/features/queries) method to send SQL queries to the database sever and receive responses. The `db/index.js` file establishes the connection to the database. Your instructor will walk through this with you.
 
-## Demo 
+## Demo
 Your instructor will demonstrate implementing the books API, now using a real database. You will then implements the Pets API.
 
 ## Instructions
-* [Part 1](api-spec-part-1.md)
-* [Part 1 Extensions](part-1-extensions.md)
-* [Part 2](api-spec-part-2.md)
-* [Part 2 Extensions](part-2-extensions.md)
+* [Part 1](./docs/part1)
+* [Part 2](./docs/part2)
 
 ## Tips
 - Take a look inside the `sql` folder to see what data types with which you are working with.
-- Use ElephantSQL to check if your requests are successfully creating rows in the database (there will be mockData stored in there already).
+- Use ElephantSQL to check if your requests are successfully creating rows in the database (there will be seed data stored in there already).

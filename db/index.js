@@ -4,8 +4,8 @@ require('dotenv').config()
 //Require the postgres library
 const { Client } = require("pg");
 
-//Get the connection string from process.env - 
-//the dotenv library sets this variable based 
+//Get the connection string from process.env -
+//the dotenv library sets this variable based
 //on the contents of our env file
 const connection = process.env.PGURL;
 
