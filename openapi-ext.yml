@@ -239,10 +239,39 @@ paths:
                 properties:
                   error:
                     type: string
-
+  /breeds:
+    get:
+      summary: Retrieve all unique breeds for a given type
+      description: This should use the existing data in the pets table. You will need to use DISTINCT in your SQL.
+      tags:
+        - breeds
+      parameters:
+        - name: type
+          in: query
+          description: Filter breeds to only animals of the specified type (e.g. "dog")
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  breeds:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Breed'
 
 components:
   schemas:
+    Breed:
+      type: object
+      properties:
+        breed:
+          type: string
     Pet:
       type: object
       properties:
