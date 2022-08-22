@@ -44,7 +44,7 @@ _Figure 2: The terminal window where the express server is running successfully_
 To interact with the database we will use the [node-postgres](https://node-postgres.com/) library. We will use the [query](https://node-postgres.com/features/queries) method to send SQL queries to the database sever and receive responses. The `db/index.js` file establishes the connection to the database. Your instructor will walk through this with you.
 
 ## Demo
-Your instructor will demonstrate implementing the books API, now using a real database. You will then implements the Pets API.
+Your instructor will demonstrate implementing some of the books API, now using a real database. You will complete the API spec implementation
 
 ## Instructions
 - Implement the [API spec](https://boolean-uk.github.io/api-express-database/)
