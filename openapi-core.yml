@@ -1,0 +1,280 @@
+openapi: 3.0.0
+info:
+  title: API Express Database
+  version: 0.0.1
+servers:
+  - url: http://localhost:3030
+basePath: /
+schemes:
+  - http
+paths:
+  /books:
+    get:
+      summary: Retrieve all books
+      tags:
+        - books
+      parameters:
+        - name: type
+          in: query
+          description: Only get books of a specific type. When `fiction` only return fiction books. When `nonfiction` only return non fiction books.
+          required: false
+          schema:
+            type: string
+            enum:
+              - fiction
+              - nonfiction
+        - name: topic
+          in: query
+          description: Only return books of the provided topic.
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Book'
+    post:
+      summary: Create a book
+      tags:
+        - books
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookPost"
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book:
+                    type: object
+                    $ref: "#/components/schemas/Book"
+  /books/{id}:
+    get:
+      summary: Get a book by ID
+      tags:
+        - books
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book:
+                    type: object
+                    $ref: "#/components/schemas/Book"
+    put:
+      summary: Update a book
+      tags:
+        - books
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookPost"
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book:
+                    type: object
+                    $ref: "#/components/schemas/Book"
+    delete:
+      summary: Delete a book
+      tags:
+        - books
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  book:
+                    type: object
+                    $ref: "#/components/schemas/Book"
+  /pets:
+    get:
+      summary: Retrieve all pets
+      tags:
+        - pets
+      parameters:
+        - name: type
+          in: query
+          description: Only returns pets of the provided type (e.g. "dog")
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pets:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Pet'
+    post:
+      summary: Create a pet
+      tags:
+        - pets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PetPost"
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pet:
+                    type: object
+                    $ref: "#/components/schemas/Pet"
+  /pets/{id}:
+    get:
+      summary: Get a pet by ID
+      tags:
+        - pets
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pet:
+                    type: object
+                    $ref: "#/components/schemas/Pet"
+    put:
+      summary: Update a pet
+      tags:
+        - pets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PetPost"
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pet:
+                    type: object
+                    $ref: "#/components/schemas/Pet"
+    delete:
+      summary: Delete a pet
+      tags:
+        - pets
+      responses:
+        201:
+          description: OK
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pet:
+                    type: object
+                    $ref: "#/components/schemas/Pet"
+
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
+        type:
+          type: string
+        breed:
+          type: string
+        microchip:
+          type: boolean
+    PetPost:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
+        type:
+          type: string
+        breed:
+          type: string
+        microchip:
+          type: boolean
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        type:
+          type: string
+        author:
+          type: string
+        topic:
+          type: string
+        publicationDate:
+          type: string
+        pages:
+          type: integer
+    BookPost:
+      type: object
+      properties:
+        title:
+          type: string
+        type:
+          type: string
+        author:
+          type: string
+        topic:
+          type: string
+        publicationDate:
+          type: string
+        pages:
+          type: integer
