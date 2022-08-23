@@ -16,13 +16,13 @@ paths:
       parameters:
         - name: type
           in: query
-          description: Only get books of a specific type. When `fiction` only return fiction books. When `nonfiction` only return non fiction books.
+          description: Only get books of a specific type. When `Fiction` only return fiction books. When `Non-Fiction` only return non fiction books.
           required: false
           schema:
             type: string
             enum:
-              - fiction
-              - nonfiction
+              - Fiction
+              - Non-Fiction
         - name: topic
           in: query
           description: Only return books of the provided topic.
