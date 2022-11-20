@@ -17,7 +17,7 @@ paths:
       parameters:
         - name: author
           in: query
-          description: Only get books by a specific author.
+          description: Only get books by a specific author. Default to all books if not provided
           required: false
           schema:
             type: string
@@ -36,7 +36,7 @@ paths:
       responses:
         200:
           description: OK
-          content: 
+          content:
             application/json:
               schema:
                 type: object
@@ -45,6 +45,10 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Book'
+                  perPage:
+                    type: integer
+                  page:
+                    type: integer
     post:
       summary: Create a book
       description: Add some error responses!
@@ -159,7 +163,7 @@ paths:
       responses:
         200:
           description: OK
-          content: 
+          content:
             application/json:
               schema:
                 type: object
@@ -168,6 +172,10 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Pet'
+                  perPage:
+                    type: integer
+                  page:
+                    type: integer
     post:
       summary: Create a pet
       tags:
@@ -255,7 +263,7 @@ paths:
       responses:
         200:
           description: OK
-          content: 
+          content:
             application/json:
               schema:
                 type: object
