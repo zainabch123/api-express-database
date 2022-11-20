@@ -43,6 +43,15 @@ describe("Books Endpoint", () => {
       await insertBooks()
     })
 
+    it("response has pagination properties", async () => {
+      const response = await supertest(app).get(`/books?page=2&perPage=30`)
+
+      expect(response.status).toEqual(200)
+      expect(response.body.books).not.toEqual(undefined)
+      expect(response.body.page).toEqual(2)
+      expect(response.body.per_page).toEqual(30)
+    })
+
     it("will return page 2 only of 30 books", async () => {
       const response = await supertest(app).get(`/books?page=2&perPage=30`)
 
