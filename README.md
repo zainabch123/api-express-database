@@ -49,6 +49,37 @@ Your instructor will demonstrate implementing some of the books API, now using a
 ## Instructions
 - Implement the [API spec](https://boolean-uk.github.io/api-express-database/standard)
 
+## Tests
+
+Run the following commands from your project directory to run the test suites:
+```sh
+$ npm test # standard criteria
+$ npm run test-extensions # extension criteria
+```
+
+You can also focus on one test at a time - use the [jest docs](https://jestjs.io/docs/cli) to help filter which tests to run. We recommend you run tests manually with the option `--forceExit`.
+
+For example, for the following test:
+```js
+it("will list all books", async () => {
+  const response = await supertest(app).get("/books")
+
+  expect(response.status).toEqual(200)
+  expect(response.body.books).not.toEqual(undefined)
+  expect(response.body.books.length).toEqual(2)
+  const expectedBooks = [book1, book2]
+  response.body.books.forEach((retrievedBook, index) => {
+    expect(retrievedBook.title).toEqual(expectedBooks[index].title)
+  })
+})
+```
+
+Here are two ways to run it.
+```sh
+$ npx jest -t "will list all books" --forceExit
+$ npx jest test/api/routes/books.spec.js --forceExit # remember to add the 'f' before it()
+```
+
 ## Extension 1
 - Implement the [extension API spec](https://boolean-uk.github.io/api-express-database/extension)
 
