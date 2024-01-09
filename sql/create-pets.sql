@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS pets (
   age       INTEGER       NOT NULL,
   type      VARCHAR(255)   NOT NULL,
   breed     VARCHAR(255)   NOT NULL,
-  microchip BOOLEAN       NOT NULL
+  has_microchip BOOLEAN       NOT NULL
 );
