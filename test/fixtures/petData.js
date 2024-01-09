@@ -4,13 +4,13 @@ module.exports = {
     age: 6,
     type: 'dog',
     breed: 'Glen of Imaal Terrier',
-    microchip: true
+    has_microchip: true
   },
   pet2: {
     name: 'Nakia',
     age: 14,
     type: 'dog',
     breed: 'Glen of Imaal Terrier',
-    microchip: false
+    has_microchip: false
   }
 }
