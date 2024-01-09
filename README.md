@@ -82,6 +82,8 @@ $ npx jest test/api/routes/books.spec.js --forceExit # remember to add the 'f' b
 
 ## Extension 1
 - Implement the [extension API spec](https://boolean-uk.github.io/api-express-database/extension)
+- This API spec has some of the same endpoints as the Standard Criteria API spec, but they are **in addition to / build 
+  on top of** that one. 
 
 ## Extension 2
 So far we've been including all our database code directly in our route handlers. In a real application, this is considered bad practice. It would become difficult to maintain as the code base grows, and we are also mixing concerns. We have routing code, request/response handling and database access all in a single function. This leads to tight coupling and low cohesion.
