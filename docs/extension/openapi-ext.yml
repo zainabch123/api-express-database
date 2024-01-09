@@ -293,7 +293,7 @@ components:
           type: string
         breed:
           type: string
-        microchip:
+        has_microchip:
           type: boolean
     PetPost:
       type: object
@@ -306,7 +306,7 @@ components:
           type: string
         breed:
           type: string
-        microchip:
+        has_microchip:
           type: boolean
     Book:
       type: object
@@ -321,7 +321,7 @@ components:
           type: string
         topic:
           type: string
-        publicationDate:
+        publication_date:
           type: string
         pages:
           type: integer
@@ -336,7 +336,7 @@ components:
           type: string
         topic:
           type: string
-        publicationDate:
+        publication_date:
           type: string
         pages:
           type: integer
