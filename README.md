@@ -14,14 +14,11 @@ In this workshop we're going to look at how to use express with a postgres datab
 
 For this exercise we will also need to configure our database:
 
-4. In ElephantSQL, create a new instance
+4. Create a postgres database either locally or via a cloud provider like [Neon](https://neon.tech)
 
-![](images/elephaphantSQLInstance.png)
-_Figure 1: A new ElephantSQL database instance_
+5. Connect to your postgres database instance in a tool like [TablePlus](https://tableplus.com/)
 
-5. Connect to your ElephantSQL instance in TablePlus or a similar tool.
-
-6. Copy the SQL from the files in the `sql/` directory and run them in TablePlus (alternatively, you can copy them into ElephantSQL's "Browser" tool)
+6. Copy the SQL from the files in the `sql/` directory and run them in TablePlus
 
 * create-books.sql
 * create-pets.sql
