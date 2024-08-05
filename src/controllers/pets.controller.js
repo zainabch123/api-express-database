@@ -11,12 +11,16 @@ const getAllPets = async () => {
 
 const createPet = async (pet) => {
   try {
-    const response = await client.query(`
-      INSERT INTO pets (name, age, type, breed, has_microchip)
-      VALUES
-      ('${pet.name}', '${pet.age}', '${pet.type}', '${pet.breed}', '${pet.has_microchip}') returning *
-    `);
-    return response.rows;
+    const sqlQuery = `insert into pets (name, age, type, breed, has_microchip) values ($1, $2, $3, $4, $5) returning *`;
+    const response = await client.query(sqlQuery, [
+      pet.name,
+      pet.age,
+      pet.type,
+      pet.breed,
+      pet.has_microchip,
+    ]);
+
+    return response.rows[0];
   } catch (error) {
     console.log("Error:", error);
   }
@@ -45,10 +49,10 @@ const updatePet = async (id, petInfo) => {
 
 const deletePet = async (id) => {
   try {
-    const response = await client.query(
-      `DELETE FROM pets WHERE id = ${id} RETURNING *`
-    );
-    return response.rows;
+    const sqlQuery = `delete from pets where id = $1 returning *`;
+    const response = await client.query(sqlQuery, [id]);
+
+    return response.rows[0];
   } catch (error) {
     console.log("Error:", error);
   }
